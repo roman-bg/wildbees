@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍅 Благодарим за поръчката!</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #eaf7e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 20px;
+        }
+
+        .site-container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(40, 90, 40, 0.25);
+            border: 1px solid #c0ddb0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2f5e3a;
+            font-weight: 600;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 3px dashed #a8d08d;
+            padding-bottom: 20px;
+        }
+
+        h1::before {
+            content: "🍅";
+            font-size: 2.2rem;
+        }
+
+        .thankyou-message {
+            font-size: 1.5rem;
+            color: #1d4225;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+
+        .thankyou-message::before {
+            content: "🙏 ";
+            font-size: 2rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: none;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 8px 16px rgba(0, 60, 0, 0.2);
+            border: 2px solid transparent;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #2f5e3a;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #3f7a4e;
+            transform: scale(1.02);
+            box-shadow: 0 12px 20px rgba(40, 100, 40, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #2f5e3a;
+            border-color: #b8d9a8;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #5f7e5f;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="site-container">
+        <h1>Благодарим ви!</h1>
+
+        <div class="thankyou-message">
+            Благодарим ви за вашата поръчка!
+        </div>
+
+        <p style="color: #2b5e2b; font-size: 1.1rem;">
+            Ще се свържем с вас скоро за потвърждение и детайли относно доставката.
+        </p>
+
+        <div class="button-group">
+            <a href="index.html" class="btn btn-primary">🌿 Към сортовете</a>
+            <a href="order.html" class="btn btn-secondary">🍅 Нова поръчка</a>
+        </div>
+
+        <footer>
+            💚 За информация и контакти тел: 0888 785 019
+        </footer>
+    </div>
+</body>
+</html>
