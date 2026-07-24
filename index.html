@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пиеноло (Piennolo del Vesuvio) – древен сорт, устойчиво бъдеще</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+      background: #fef9f0;
+      color: #2c2b28;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffffef;
+      border-radius: 36px 36px 24px 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 6px 12px rgba(0, 0, 0, 0.05);
+      padding: 2.5rem 2.2rem;
+      transition: all 0.2s ease;
+    }
+
+    @media (max-width: 550px) {
+      .container {
+        padding: 1.8rem 1.2rem;
+      }
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 4px;
+      background: #d1492c;
+      margin: 0.8rem auto 0.2rem;
+      border-radius: 4px;
+      opacity: 0.5;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #7a2e1a;
+      margin-bottom: 0.25rem;
+      line-height: 1.2;
+    }
+
+    .intro-text {
+      font-size: 1.08rem;
+      border-left: 4px solid #c97d5a;
+      padding-left: 1.4rem;
+      background: #fcf7f2;
+      border-radius: 0 16px 16px 0;
+      margin: 1.8rem 0 2.2rem 0;
+      color: #3d322a;
+      text-align: justify;
+    }
+
+    .intro-text strong {
+      color: #a34125;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #5e3522;
+      margin: 2.5rem 0 1rem 0;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px dashed #d9c5b2;
+    }
+
+    h2 i {
+      font-weight: 300;
+      color: #a84e2c;
+      font-style: italic;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #6f3e28;
+      margin: 1.8rem 0 0.8rem 0;
+    }
+
+    .highlight-box {
+      background: #f5ede5;
+      padding: 1.6rem 2rem;
+      border-radius: 28px;
+      margin: 1.8rem 0;
+      border: 1px solid #dfd0c0;
+      box-shadow: inset 0 2px 4px rgba(255, 245, 235, 0.5);
+      text-align: justify;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0.2rem;
+    }
+
+    .piennolo-method {
+      background: #eae1d6;
+      border-radius: 32px 8px 32px 8px;
+      padding: 1.8rem 2.2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+      border-left: 6px solid #b56f4a;
+      text-align: justify;
+    }
+
+    .piennolo-method strong {
+      color: #602f1a;
+      font-weight: 600;
+    }
+
+    .grid-benefits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.8rem 0 1rem;
+    }
+
+    .grid-benefits .item {
+      background: #faf3ea;
+      flex: 1 1 180px;
+      padding: 1rem 1.2rem;
+      border-radius: 32px 8px 32px 8px;
+      border: 1px solid #e4d2c0;
+      font-weight: 450;
+      color: #3a2b1f;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      text-align: center;
+    }
+
+    .grid-benefits .item span {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 0.2rem;
+      color: #a34125;
+    }
+
+    .trial-bulgaria {
+      background: #dce8e0;
+      padding: 1.5rem 2rem;
+      border-radius: 24px 4px 24px 4px;
+      margin-top: 2.2rem;
+      border: 1px solid #b7cbbc;
+      color: #1e3a2b;
+      text-align: justify;
+    }
+
+    .trial-bulgaria strong {
+      color: #0d4b2a;
+      font-weight: 600;
+    }
+
+    .footer-note {
+      margin-top: 2.8rem;
+      text-align: right;
+      font-size: 0.9rem;
+      color: #7b6b5c;
+      border-top: 1px solid #e3d5c6;
+      padding-top: 1.4rem;
+      font-style: italic;
+    }
+
+    .footer-note a {
+      color: #7a2e1a;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px dotted #c97d5a;
+      font-style: normal;
+      transition: 0.2s;
+    }
+
+    .footer-note a:hover {
+      color: #b34120;
+      border-bottom-color: #b34120;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .intro-text { font-size: 1rem; padding-left: 1rem; }
+    }
+
+    .accent-red {
+      color: #b34120;
+    }
+
+    /* LIGHTBOX СТИЛОВЕ */
+    .lightbox-wrapper {
+      margin: 2.2rem 0 1.2rem 0;
+      text-align: center;
+    }
+
+    .lightbox-trigger {
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 100%;
+      border: 1px solid #e1d2c0;
+      background: #fbf6ee;
+      padding: 4px;
+    }
+
+    .lightbox-trigger:hover {
+      transform: scale(1.01);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .lightbox-trigger img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 680px;
+      border-radius: 20px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background: #dacfc1;
+    }
+
+    .lightbox-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      object-fit: contain;
+      background: #1e1a16;
+      padding: 4px;
+      border: 2px solid #f0e1d0;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 3rem;
+      color: #f5ede5;
+      cursor: pointer;
+      font-weight: 300;
+      line-height: 1;
+      transition: transform 0.2s;
+      background: transparent;
+      border: none;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .lightbox-close:hover {
+      transform: scale(1.2);
+      color: #fff;
+    }
+
+    /* justified за почти всички текстови блокове */
+    p, .intro-text, .highlight-box, .piennolo-method, .trial-bulgaria {
+      text-align: justify;
+    }
+
+    .grid-benefits .item {
+      text-align: center;
+    }
+
+    h1, h2, h3, .footer-note {
+      text-align: left;
+    }
+    .hero h1 {
+      text-align: center;
+    }
+
+    /* премахнат .quote-vesuvio */
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>🍅  Пиеноло - Piennolo del Vesuvio</h1>
+    <!-- премахнато subhead и badge -->
+  </div>
+
+  <!-- Увод -->
+  <div class="intro-text">
+    <p><strong>Pomodorino del Piennolo del Vesuvio</strong> е един от най-емблематичните традиционни сортове домати в Италия, отглеждан от векове по склоновете на вулкана Везувий в област Кампания. Благодарение на уникалното съчетание от вулканични почви, средиземноморски климат и местни земеделски традиции, сортът развива отличителни качества, които през 2009 г. му носят европейско защитено наименование за произход (PDO).</p>
+  </div>
+
+  <!-- СНИМКА с lightbox преди жълтата рядкост -->
+  <div class="lightbox-wrapper">
+    <div class="lightbox-trigger" id="lightboxTrigger">
+      <img src="pinolo.png" alt="Pomodorino del Piennolo del Vesuvio – гроздове, окачени на традиционния piennolo" loading="lazy">
+    </div>
+    <p style="font-size: 0.9rem; color: #6f5e4d; margin-top: 0.4rem; text-align: center; font-style: italic;">🌿 Традиционният piennolo – домати, вързани на гроздове за дългосрочно съхранение</p>
+  </div>
+
+  <!-- Lightbox overlay (скрит) -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="pinolo.png" alt="Pomodorino del Piennolo del Vesuvio – увеличен изглед">
+  </div>
+
+  <!-- Жълта разновидност -->
+  <section>
+    <h2>🌼 Жълтата рядкост <i>Pomodorino Giallo</i></h2>
+    <p>Освен добре познатата червена форма, съществува и по-рядко срещана жълта разновидност — <strong>Pomodorino Giallo del Piennolo</strong>, която се отличава с по-мек и сладък вкус, по-ниска киселинност и е високо ценена в традиционната кухня на Южна Италия. И двете разновидности запазват характерните особености на сорта — дребни плодове, високо съдържание на сухо вещество, богат аромат и отлична съхраняемост.</p>
+      </section>
+
+  <!-- Piennolo метод -->
+  <div class="piennolo-method">
+    <h3 style="margin-top: 0; color: #4e2c1a;">🧺 Piennolo – традиционно съхранение</h3>
+    <p>Една от най-забележителните особености на сорта е традиционният начин на съхранение, известен като <strong>piennolo</strong>. След прибирането на реколтата доматите се връзват на големи гроздове и се окачват в сухи, сенчести и добре проветриви помещения. Благодарение на по-дебелата си кожица, по-ниското съдържание на свободна вода и високата концентрация на сухо вещество плодовете могат да останат свежи в продължение на няколко месеца без необходимост от хладилно съхранение.</p>
+    <p style="margin-top: 0.6rem;">Тази вековна практика позволява доматите да се използват през цялата зима и е една от причините сортът да се е превърнал в символ на устойчивото традиционно земеделие в района на Везувий.</p>
+  </div>
+
+  <!-- Устойчивост и качества -->
+  <section>
+    <h2>💪 Устойчивост &amp; хранителна стойност</h2>
+    <div class="grid-benefits">
+      <div class="item"><span>💧</span> Висока устойчивост на суша и горещини</div>
+      <div class="item"><span>🌱</span> Дълбока коренова система</div>
+      <div class="item"><span>🍬</span> Богати на естествени захари</div>
+      <div class="item"><span>🍊</span> Високо съдържание на витамин C</div>
+      <div class="item"><span>🧪</span> Фенолни съединения &amp; аромати</div>
+    </div>
+
+    <div class="highlight-box">
+      <p>Растенията развиват дълбока коренова система, използват ефективно наличната почвена влага и понасят по-добре топлинния стрес в сравнение с много съвременни сортове. Плодовете са богати на естествени захари, витамин C, фенолни съединения и ароматни вещества, което ги прави отличен избор както за прясна консумация, така и за приготвяне на традиционни италиански сосове, консервиране, сушене и гурме специалитети.</p>
+    </div>
+  </section>
+
+  <!-- (премахнат цитатът) -->
+
+  <!-- Изпитание в България -->
+  <div class="trial-bulgaria">
+    <h3 style="margin-top: 0; color: #1b4d2e;">🇧🇬 Изпитание в България (2026)</h3>
+    <p><strong>Специално внимание</strong> е отделено и на успешното му изпитване при полски условия в района на Велико Търново през 2026 г., което показва добрия му потенциал за отглеждане и в България. Това потвърждава, че древният генетичен ресурс може да намери нов дом и да допринесе за местното биологично разнообразие.</p>
+  </div>
+
+  <!-- Заключителен абзац с обобщение -->
+  <div style="margin: 2rem 0 0.4rem; background: #fcf6ef; padding: 0.8rem 1.8rem; border-radius: 60px 12px 60px 12px;">
+    <p style="font-size: 1.05rem; text-align: justify;"><span style="font-weight: 500;">Pomodorino del Piennolo</span> — не само вкус от миналото, но и мост към устойчивото земеделие на бъдещето. <span style="color: #b84c2a;">🍅</span></p>
+  </div>
+
+  <div class="footer-note">
+    <a href="order.html">поръчай</a>
+  </div>
+
+</div>
+<!-- край container -->
+
+<script>
+  (function() {
+    const trigger = document.getElementById('lightboxTrigger');
+    const overlay = document.getElementById('lightboxOverlay');
+    const closeBtn = document.getElementById('lightboxClose');
+
+    function openLightbox(e) {
+      e.preventDefault();
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', openLightbox);
+    closeBtn.addEventListener('click', closeLightbox);
+
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
+```
