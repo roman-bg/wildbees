@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🍅 Поръчка – Pomodorino del Piennolo del Vesuvio</title>
+
+  <!-- CSS на GLightbox за lightbox ефекта -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
   <style>
     * {
       margin: 0;
@@ -225,6 +229,20 @@
       font-size: 2rem;
     }
 
+    /* Стилове за текстовите линкове в инфо блока */
+    .info-note a.glightbox {
+      color: #7a2e1a;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px dotted #c97d5a;
+      transition: all 0.2s ease;
+    }
+
+    .info-note a.glightbox:hover {
+      color: #b34120;
+      border-bottom-color: #b34120;
+    }
+
     .button-group {
       display: flex;
       gap: 1.5rem;
@@ -354,7 +372,7 @@
 
     <!-- ЕДИНСТВЕН СОРТ – Pomodorino del Piennolo del Vesuvio -->
     <fieldset>
-      <legend>🍅 Изберете сорт</legend>
+      <legend>🍅 Изберете</legend>
       <p style="margin: 0 0 1.2rem 0; color: #5e3522; font-weight: 450;">Въведете желаното количество опаковки (по подразбиране 1):</p>
 
       <div class="seed-single">
@@ -366,7 +384,11 @@
 
       <div class="info-note">
         <span class="info-icon">📦</span>
-        <span><strong>Всяка опаковка съдържа 5 броя семена.</strong> Цената на опаковка е 2.5 Евро + цена на доставка с куриерска фирма (Еконт или Спиди).</span>
+        <span>
+          <strong>Всяка опаковка съдържа 5 броя семена.</strong>
+          Като бонус вие получавате по 5 семена от дивие вид <a href="galapagos.png" class="glightbox" data-title="Галапагоски домат">галапагоски домат</a> и сорта <a href="dragon.png" class="glightbox" data-title="Purple Dragon">Purple Dragon</a>.
+          Цената на опаковка е 5 Евро + цена на доставка с куриерска фирма (Еконт или Спиди).
+        </span>
       </div>
     </fieldset>
 
@@ -380,6 +402,14 @@
     </div>
   </form>
 </div>
+
+<!-- JS на GLightbox -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  // Инициализиране на Lightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
 </body>
 </html>
-```
