@@ -189,6 +189,19 @@
       gap: 0.8rem;
     }
 
+    .seed-item .seed-name .seed-link {
+      color: #7a2e1a;
+      text-decoration: none;
+      border-bottom: 2px dotted #c97d5a;
+      transition: all 0.2s ease;
+      font-weight: 600;
+    }
+
+    .seed-item .seed-name .seed-link:hover {
+      color: #b34120;
+      border-bottom-color: #b34120;
+    }
+
     .seed-item .seed-icon {
       font-size: 1.6rem;
     }
@@ -228,20 +241,6 @@
 
     .info-icon {
       font-size: 2rem;
-    }
-
-    /* Стилове за текстовите линкове в инфо блока */
-    .info-note a.glightbox {
-      color: #7a2e1a;
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 2px dotted #c97d5a;
-      transition: all 0.2s ease;
-    }
-
-    .info-note a.glightbox:hover {
-      color: #b34120;
-      border-bottom-color: #b34120;
     }
 
     .button-group {
@@ -319,7 +318,6 @@
       .seed-item input[type="number"] { width: 100%; }
     }
 
-    /* лек акцент върху задължителни */
     .required-note strong {
       color: #7a2e1a;
     }
@@ -387,7 +385,8 @@
       <!-- Sub Arctic Plenty -->
       <div class="seed-item">
         <span class="seed-name">
-          <span class="seed-icon">🌿</span> Sub Arctic Plenty
+          <span class="seed-icon">🌿</span>
+          <a href="arkctic.png" class="glightbox seed-link">Sub Arctic Plenty</a>
         </span>
         <input type="number" name="seed_subarctic" min="0" max="100" value="0" step="1">
       </div>
@@ -395,7 +394,8 @@
       <!-- Перуанска праскова -->
       <div class="seed-item">
         <span class="seed-name">
-          <span class="seed-icon">🍑</span> Перуанска праскова
+          <span class="seed-icon">🍑</span>
+          <a href="peach.png" class="glightbox seed-link">Перуанска праскова</a>
         </span>
         <input type="number" name="seed_peruanska" min="0" max="100" value="0" step="1">
       </div>
@@ -403,7 +403,8 @@
       <!-- Галапагоски домат -->
       <div class="seed-item">
         <span class="seed-name">
-          <span class="seed-icon">🏝️</span> Галапагоски домат
+          <span class="seed-icon">🏝️</span>
+          <a href="galapagos.png" class="glightbox seed-link">Галапагоски домат</a>
         </span>
         <input type="number" name="seed_galapagos" min="0" max="100" value="0" step="1">
       </div>
@@ -411,7 +412,8 @@
       <!-- Пурпурен дракон (Purple Dragon) -->
       <div class="seed-item">
         <span class="seed-name">
-          <span class="seed-icon">🐉</span> Пурпурен дракон (Purple Dragon)
+          <span class="seed-icon">🐉</span>
+          <a href="dragon.png" class="glightbox seed-link">Пурпурен дракон (Purple Dragon)</a>
         </span>
         <input type="number" name="seed_purpledragon" min="0" max="100" value="0" step="1">
       </div>
@@ -431,7 +433,7 @@
     </div>
 
     <div class="footer-note">
-      💚 <a href="index.html">Към началната страница</a>
+      💚 <a href="index.html">Към описанието на сорта</a>
     </div>
   </form>
 </div>
