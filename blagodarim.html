@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🍅 Благодарим за поръчката!</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background: #eaf7e1;
+            font-family: 'Segoe UI', 'Roboto', system-ui, -apple-system, sans-serif;
+            background: #fef9f0;
+            color: #2c2b28;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            margin: 20px;
         }
 
         .site-container {
             max-width: 600px;
             width: 100%;
-            background: white;
-            padding: 40px 30px;
-            border-radius: 28px;
-            box-shadow: 0 20px 40px rgba(40, 90, 40, 0.25);
-            border: 1px solid #c0ddb0;
+            background: #ffffffef;
+            border-radius: 36px 36px 24px 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 0 6px 12px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem 2.2rem;
             text-align: center;
+            transition: all 0.2s ease;
+            border: 1px solid #e4d2c0;
+        }
+
+        @media (max-width: 550px) {
+            .site-container {
+                padding: 1.8rem 1.2rem;
+            }
         }
 
         h1 {
-            color: #2f5e3a;
+            font-size: 2.5rem;
             font-weight: 600;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            color: #7a2e1a;
+            margin-bottom: 0.25rem;
+            line-height: 1.2;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            border-bottom: 3px dashed #a8d08d;
+            border-bottom: 3px dashed #d9c5b2;
             padding-bottom: 20px;
         }
 
@@ -51,9 +63,10 @@
 
         .thankyou-message {
             font-size: 1.5rem;
-            color: #1d4225;
+            color: #3d322a;
             margin: 30px 0;
             line-height: 1.6;
+            font-weight: 600;
         }
 
         .thankyou-message::before {
@@ -61,55 +74,83 @@
             font-size: 2rem;
         }
 
+        .info-text {
+            color: #5e3522;
+            font-size: 1.1rem;
+            background: #f8efe6;
+            padding: 1.2rem 1.8rem;
+            border-radius: 28px;
+            border-left: 6px solid #b56f4a;
+            border: 1px solid #dfd0c0;
+            box-shadow: inset 0 2px 4px rgba(255, 245, 235, 0.5);
+        }
+
         .button-group {
             display: flex;
-            gap: 20px;
+            gap: 1.5rem;
             justify-content: center;
-            margin-top: 30px;
+            margin-top: 2rem;
             flex-wrap: wrap;
         }
 
         .btn {
             border: none;
-            padding: 16px 40px;
+            padding: 0.9rem 2.8rem;
             font-size: 1.2rem;
             font-weight: 700;
             border-radius: 60px;
             cursor: pointer;
             transition: 0.2s;
-            box-shadow: 0 8px 16px rgba(0, 60, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
             border: 2px solid transparent;
             text-decoration: none;
             display: inline-block;
+            font-family: inherit;
         }
 
         .btn-primary {
-            background: #2f5e3a;
+            background: #7a2e1a;
             color: white;
         }
 
         .btn-primary:hover {
-            background: #3f7a4e;
+            background: #a34125;
             transform: scale(1.02);
-            box-shadow: 0 12px 20px rgba(40, 100, 40, 0.3);
+            box-shadow: 0 12px 24px rgba(122, 46, 26, 0.25);
         }
 
         .btn-secondary {
-            background: #f0f0f0;
-            color: #2f5e3a;
-            border-color: #b8d9a8;
+            background: #f5ede5;
+            color: #5e3522;
+            border-color: #dfd0c0;
         }
 
         .btn-secondary:hover {
-            background: #e0e0e0;
+            background: #eae1d6;
             transform: scale(1.02);
         }
 
         footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #5f7e5f;
+            margin-top: 2.8rem;
+            color: #7b6b5c;
             font-size: 0.9rem;
+            border-top: 1px solid #e3d5c6;
+            padding-top: 1.4rem;
+            font-style: italic;
+        }
+
+        footer a {
+            color: #7a2e1a;
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 2px dotted #c97d5a;
+            font-style: normal;
+            transition: 0.2s;
+        }
+
+        footer a:hover {
+            color: #b34120;
+            border-bottom-color: #b34120;
         }
     </style>
 </head>
@@ -121,9 +162,9 @@
             Благодарим ви за вашата поръчка!
         </div>
 
-        <p style="color: #2b5e2b; font-size: 1.1rem;">
+        <div class="info-text">
             Ще се свържем с вас скоро за потвърждение и детайли относно доставката.
-        </p>
+        </div>
 
         <div class="button-group">
             <a href="index.html" class="btn btn-primary">🌿 Към сортовете</a>
